@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="DatacrapperWeb" uploadOnCheckin="8ebeb024-688c-4ba9-a6ad-11f4b0b21b77">
+    <serverData>
+      <paths name="DatacrapperWeb">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myUploadOnCheckinName" value="DatacrapperWeb" />
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
