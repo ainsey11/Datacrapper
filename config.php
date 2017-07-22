@@ -1,3 +1,5 @@
+
+<?php
 /**
  * Created by PhpStorm.
  * User: Robert
@@ -5,7 +7,6 @@
  * Time: 00:55
  */
 
-<?php
 /**********************************************************************
   *dbHost = Host of the MySQL DataBase Server
  *dbUser = Username

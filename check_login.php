@@ -1,3 +1,4 @@
+<?php
 /**
  * Created by PhpStorm.
  * User: Robert
@@ -5,7 +6,6 @@
  * Time: 00:56
  */
 
-<?php
 define(DOC_ROOT,dirname(__FILE__)); // To properly get the config.php file
 $username = $_POST['username']; //Set UserName
 $password = $_POST['password']; //Set Password
@@ -18,7 +18,7 @@ if(isset($username, $password)) {
     $mypassword = stripslashes($password);
     $myusername = mysqli_real_escape_string($dbC, $myusername);
     $mypassword = mysqli_real_escape_string($dbC, $mypassword);
-    $sql="SELECT * FROM login_admin WHERE user_name='$myusername' and user_pass=SHA('$mypassword')";
+    $sql="SELECT * FROM authentication WHERE user_name='$myusername' and user_pass=SHA('$mypassword')";
     $result=mysqli_query($dbC, $sql);
     // Mysql_num_row is counting table row
     $count=mysqli_num_rows($result);
