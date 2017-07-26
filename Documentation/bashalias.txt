@@ -1,0 +1,1 @@
+alias deployweb="sudo bash ~/code/Datacrapper/Tools/deployweb.sh"
