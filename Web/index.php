@@ -21,6 +21,7 @@
 	<a href="content/viewservertemps.php" class="btn btn-default btn-lg btn-block">View Matrix Temperatures</a>
 	<a href="content/.php" class="btn btn-default btn-lg btn-block">Enter Matrix Control Panel</a>
 	<a href="content/.php" class="btn btn-default btn-lg btn-block">Enter Datacrapper Control Admin Panel</a>
+	<a href="content/.php" class="btn btn-default btn-lg btn-block">Other useful links and things</a>
 	<div class="container">
 		<div class="form-signin">
 		<a href="login/logout.php" class="btn btn-default btn-lg btn-block">Logout</a>
