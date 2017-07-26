@@ -2,6 +2,8 @@ DB Name = datacrapperdb
 SQL = 
 create database datacrapperdb;
 use datacrapperdb;
+grant all on datacrapperdb.* to 'datacrapperdbuser'@'%' identified by 'aRdZA4SGugnNtoJk';
+
 
 CREATE TABLE `members` (
   `id` char(23) NOT NULL,
