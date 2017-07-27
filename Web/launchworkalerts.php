@@ -10,7 +10,7 @@
 <body>
 <div class="container">
       <div class="form-signin">
-	 <a href="content/launchworkalerts.php" class="btn btn-default btn-lg btn-block">Start Work Alerts on EdiNag</a>
+	 <a href="launchedworkalerts.php" class="btn btn-default btn-lg btn-block">Start Work Alerts on EdiNag</a>
 	<br>
 	 <a href="/index.php" class="btn btn-default btn-lg btn-block">Click here to return to main menu</a>
       </div>

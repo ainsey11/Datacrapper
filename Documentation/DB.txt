@@ -27,4 +27,10 @@ CREATE TABLE `loginAttempts` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
+create table `WorkAlerts` (
+ `ID` int(11) NOT NULL AUTO_INCREMENT,
+`time`  datetime NOT NULL,
+`action` nvarchar(20) NOT NULL,
+`pid` numeric(10) NOT NULL,
+primary key (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
