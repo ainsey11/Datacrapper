@@ -12,9 +12,6 @@ require "scripts/startworkalerts.php";
   <link href="css/main.css" rel="stylesheet" media="screen">
   </head>
  <body>
-     <div class="container">
-        <div class="alert alert-success">Script Launched</div>
-     </div>
         <div class="form-signin">
         <a href="/index.php" class="btn btn-default btn-lg btn-block">Return to Main Menu</a>
         </div>
