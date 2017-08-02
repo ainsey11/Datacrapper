@@ -24,7 +24,7 @@ require "../login/loginheader.php";
 		</pre>
 		<br>
 		<div class="form-signin">
-		        <a href="matrixtemps.php" class="btn btn-default btn-lg btn-block">Refresh Disk Statistics</a>
+		        <a href="diskstats.php" class="btn btn-default btn-lg btn-block">Refresh Disk Statistics</a>
 		        <a href="index.php" class="btn btn-default btn-lg btn-block">Return to MCP Menu</a>
 		        <a href="/index.php" class="btn btn-default btn-lg btn-block">Return to Main Menu</a>
         	</div>	
