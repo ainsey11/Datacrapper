@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Datacrapper Control</title>
     <meta name="viewport" content="width=device-width, initial-scale=10.0">
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link href="css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="css/main.css" rel="stylesheet" media="screen">
   </head>
