@@ -27,6 +27,7 @@
 	<a href="content/.php" class="btn btn-default btn-lg btn-block">View Local Matrix Monitoring</a>
 	<a href="matrixtemps.php" class="btn btn-default btn-lg btn-block">View Matrix Temperatures</a>
 	<a href="content/.php" class="btn btn-default btn-lg btn-block">View Matrix Disk Space Statistics</a>
+	<a href="http://matrix:8384" class="btn btn-default btn-lg btn-block">View Matrix Syncthing Control Panel</a>
 	<div class="container">
 		<div class="form-signin">
 		<a href="../index.php" class="btn btn-default btn-lg btn-block">Return to Main Menu</a>
