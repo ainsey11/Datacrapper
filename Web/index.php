@@ -20,9 +20,9 @@
 	<a href="/launchworkalerts.php" class="btn btn-default btn-lg btn-block">Launch EdiNag Work Alerts</a>
 	<a href="content/launchfblerts.php" class="btn btn-default btn-lg btn-block">Launch EdiNag Facebook Alerts</a>
 	<a href="matrixtemps.php" class="btn btn-default btn-lg btn-block">View Matrix Temperatures</a>
-	<a href="content/.php" class="btn btn-default btn-lg btn-block">Enter Matrix Control Panel</a>
-	<a href="content/.php" class="btn btn-default btn-lg btn-block">Enter Datacrapper Control Admin Panel</a>
-	<a href="content/.php" class="btn btn-default btn-lg btn-block">Other useful links and things</a>
+	<a href="mcp/index.php" class="btn btn-default btn-lg btn-block">Enter Matrix Control Panel</a>
+	<a href="dcp/index.php" class="btn btn-default btn-lg btn-block">Enter Datacrapper Control Admin Panel</a>
+	<a href="somerandomlinkivenotworkedout.php" class="btn btn-default btn-lg btn-block">Other useful links and things</a>
 	<div class="container">
 		<div class="form-signin">
 		<a href="login/logout.php" class="btn btn-default btn-lg btn-block">Logout</a>
