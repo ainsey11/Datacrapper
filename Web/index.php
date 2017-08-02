@@ -18,7 +18,7 @@
 	<br>
 	</div>
 	<a href="/launchworkalerts.php" class="btn btn-default btn-lg btn-block">Launch EdiNag Work Alerts</a>
-	<a href="content/launchfblerts.php" class="btn btn-default btn-lg btn-block">Launch EdiNag Facebook Alerts</a>
+	<a href="http://librenms.datacrapper.local" class="btn btn-default btn-lg btn-block">Launch LibreNMS</a>
 	<a href="mcp/index.php" class="btn btn-default btn-lg btn-block">Enter Matrix Control Panel</a>
 	<a href="dcp/index.php" class="btn btn-default btn-lg btn-block">Enter Datacrapper Control Admin Panel</a>
 	<a href="somerandomlinkivenotworkedout.php" class="btn btn-default btn-lg btn-block">Other useful links and things</a>
