@@ -18,7 +18,7 @@
 	</div>
 	<a href="/launchworkalerts.php" class="btn btn-default btn-lg btn-block">Launch EdiNag Work Alerts</a>
 	<a href="content/launchfblerts.php" class="btn btn-default btn-lg btn-block">Launch EdiNag Facebook Alerts</a>
-	<a href="content/matrixtemps.php" class="btn btn-default btn-lg btn-block">View Matrix Temperatures</a>
+	<a href="matrixtemps.php" class="btn btn-default btn-lg btn-block">View Matrix Temperatures</a>
 	<a href="content/.php" class="btn btn-default btn-lg btn-block">Enter Matrix Control Panel</a>
 	<a href="content/.php" class="btn btn-default btn-lg btn-block">Enter Datacrapper Control Admin Panel</a>
 	<a href="content/.php" class="btn btn-default btn-lg btn-block">Other useful links and things</a>

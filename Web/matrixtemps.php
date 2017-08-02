@@ -13,12 +13,18 @@ require "login/loginheader.php";
   </head>
 <body>
 <div class="container">
-      <div class="form-signin">
+      <div>
 		<?php
-			$cmd = 'sensors';
-			$output = shell_exec($cmd);
+		$cmd = shell_exec('sensors');
 		?>
-		The temps are: <?=$output?> <br />
+		<h2>The current temperatures of Matrix are:</h2>
+		<pre> 
+			<?=$cmd?>
+		</pre>
+		<br>
+		<div class="form-signin">
+		        <a href="/index.php" class="btn btn-default btn-lg btn-block">Return to Main Menu</a>
+        	</div>	
 	</div>
 </div>
 </body>
