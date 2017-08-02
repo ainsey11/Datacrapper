@@ -17,7 +17,7 @@ require "login/loginheader.php";
 		<?php
 			$cmd = 'sensors';
 			$output = shell_exec($cmd);
-		<?>
+		?>
 		The temps are: <?=$output?> <br />
 	</div>
 </div>
