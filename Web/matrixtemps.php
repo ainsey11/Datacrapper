@@ -23,6 +23,7 @@ require "login/loginheader.php";
 		</pre>
 		<br>
 		<div class="form-signin">
+		        <a href="/matrixtemps.php" class="btn btn-default btn-lg btn-block">Refresh Temperature Values</a>
 		        <a href="/index.php" class="btn btn-default btn-lg btn-block">Return to Main Menu</a>
         	</div>	
 	</div>
