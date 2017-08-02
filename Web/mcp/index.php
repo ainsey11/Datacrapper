@@ -1,4 +1,4 @@
-<?php require "login/loginheader.php"; ?>
+<?php require "../login/loginheader.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=10.0">
     <link rel="icon" type="image/png" href="favicon.png" />
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="css/main.css" rel="stylesheet" media="screen">
+    <link href="../css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="../css/main.css" rel="stylesheet" media="screen">
   </head>
   <body>
     <div class="container">
@@ -25,10 +25,11 @@
 	<a href="matrixtemps.php" class="btn btn-default btn-lg btn-block">Restart Couchpotato</a>
 	<a href="matrixtemps.php" class="btn btn-default btn-lg btn-block">Restart SabNZBD</a>
 	<a href="content/.php" class="btn btn-default btn-lg btn-block">View Local Matrix Monitoring</a>
-	<a href="content/.php" class="btn btn-default btn-lg btn-block">View Matrix Temperatures</a>
+	<a href="matrixtemps.php" class="btn btn-default btn-lg btn-block">View Matrix Temperatures</a>
 	<a href="content/.php" class="btn btn-default btn-lg btn-block">View Matrix Disk Space Statistics</a>
 	<div class="container">
 		<div class="form-signin">
+		<a href="../index.php" class="btn btn-default btn-lg btn-block">Return to Main Menu</a>
 		<a href="login/logout.php" class="btn btn-default btn-lg btn-block">Logout</a>
 		</div>
 	</div>
