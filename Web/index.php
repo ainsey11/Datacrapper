@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Datacrapper Login</title>
+    <title>Datacrapper</title>
     <meta name="viewport" content="width=device-width, initial-scale=10.0">
     <link rel="icon" type="image/png" href="favicon.png" />
     <!-- Bootstrap -->
