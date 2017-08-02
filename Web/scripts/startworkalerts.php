@@ -1,14 +1,13 @@
 <?php
 
-include 'fix_mysql.inc.php';
-
+require "../login/loginheader.php";
 $DBhost = "localhost";
 $DBuser = "datacrapperdbuser";
 $DBpass = "aRdZA4SGugnNtoJk";
 $DBName = "datacrapperdb";
 $table = "workalerts";
 
-$connection = ssh2_connect('172.16.1.41', 22);
+$connection = ssh2_connect('172.16.1.49', 22);
 ssh2_auth_password($connection, 'root', 'carsrule');
 $stream = ssh2_exec($connection, 'cd /media/sdcard/EdiNag/; bash test.sh &');
 stream_set_blocking($stream, true);
