@@ -18,6 +18,7 @@
 	<br>
 	</div>
 	<a href="matrixtemps.php" class="btn btn-default btn-lg btn-block">View Matrix Temperatures</a>
+	<a href="http://matrix:5000" class="btn btn-default btn-lg btn-block">View Matrix PSDash Panel</a>
 	<a href="diskstats.php" class="btn btn-default btn-lg btn-block">View Matrix Disk Space Statistics</a>
 	<a href="http://matrix:8384" class="btn btn-default btn-lg btn-block">View Matrix Syncthing Control Panel</a>
 	<div class="container">
