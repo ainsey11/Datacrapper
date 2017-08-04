@@ -17,8 +17,8 @@
         <div class="alert alert-success">Welcome to the Datacrapper Control Panel</div>
 	<br>
 	</div>
-	<a href="/launchworkalerts.php" class="btn btn-default btn-lg btn-block">Launch EdiNag Work Alerts</a>
-	<a href="http://librenms.datacrapper.local" class="btn btn-default btn-lg btn-block">Launch LibreNMS</a>
+	<a href="/launchworkalerts.php" class="btn btn-default btn-lg btn-block">Start Launch Panel</a>
+	<a href="/launchworkalerts.php" class="btn btn-default btn-lg btn-block">Start Kill Panel</a>
 	<a href="mcp/index.php" class="btn btn-default btn-lg btn-block">Enter Matrix Control Panel</a>
 	<a href="dcp/index.php" class="btn btn-default btn-lg btn-block">Enter Datacrapper Control Admin Panel</a>
 	<a href="somerandomlinkivenotworkedout.php" class="btn btn-default btn-lg btn-block">Other useful links and things</a>

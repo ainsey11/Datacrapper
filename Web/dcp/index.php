@@ -1,4 +1,4 @@
-<?php require "login/loginheader.php"; ?>
+<?php require "../login/loginheader.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=10.0">
     <link rel="icon" type="image/png" href="favicon.png" />
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="css/main.css" rel="stylesheet" media="screen">
+    <link href="../css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="../css/main.css" rel="stylesheet" media="screen">
   </head>
   <body>
     <div class="container">
@@ -17,7 +17,7 @@
         <div class="alert alert-success">Welcome to the Datacrapper Control Panel</div>
 	<br>
 	</div>
-	<a href="/launchworkalerts.php" class="btn btn-default btn-lg btn-block">Add New DCP User</a>
+	<a href="../login/signup.php" class="btn btn-default btn-lg btn-block">Add New DCP User</a>
 	<a href="content/launchfblerts.php" class="btn btn-default btn-lg btn-block">Remove Existing DCP User</a>
 	<div class="container">
 		<div class="form-signin">
