@@ -18,6 +18,7 @@
 	<br>
 	</div>
 	<a href="http://matrix:8989" class="btn btn-default btn-lg btn-block">Launch Sonarr</a>
+	<a href="http://matrix:8080" class="btn btn-default btn-lg btn-block">Launch SabNZBD</a>
 	<div class="container">
 		<div class="form-signin">
 		<a href="../index.php" class="btn btn-default btn-lg btn-block">Return to Main Menu</a>
