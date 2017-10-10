@@ -20,6 +20,9 @@
 	<a href="http://matrix:8989" class="btn btn-default btn-lg btn-block">Launch Sonarr</a>
 	<a href="http://matrix:7878" class="btn btn-default btn-lg btn-block">Launch Radarr</a>
 	<a href="http://matrix:8080" class="btn btn-default btn-lg btn-block">Launch SabNZBD</a>
+	<a href="http://matrix:32400/Web" class="btn btn-default btn-lg btn-block">Launch Plex</a>
+	<a href="http://matrix:8112" class="btn btn-default btn-lg btn-block">Launch Deluge</a>
+	<a href="http://matrix/zm" class="btn btn-default btn-lg btn-block">Launch Zoneminder Console</a>
 	<div class="container">
 		<div class="form-signin">
 		<a href="../index.php" class="btn btn-default btn-lg btn-block">Return to Main Menu</a>

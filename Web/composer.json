@@ -1,0 +1,15 @@
+{
+    "name": "ainsey11/datacrapper",
+    "description": "Datacrapper Control Panel",
+    "type": "project",
+    "require": {
+        "pear2/net_routeros": "^1.0@beta"
+    },
+    "authors": [
+        {
+            "name": "Robert Ainsworth",
+            "email": "robert@ainsey11.com"
+        }
+    ],
+    "minimum-stability": "beta"
+}
