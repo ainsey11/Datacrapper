@@ -70,6 +70,13 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
+     //   if (id == R.id.action_EnableVPN) {
+      //      return true;
+       // }
+       // if (id == R.id.action_GetDNS) {
+        //    return true;
+       // }
+
 
         return super.onOptionsItemSelected(item);
     }

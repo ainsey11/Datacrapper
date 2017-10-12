@@ -4,11 +4,11 @@
     <item
         android:id="@+id/ShowIP"
         android:orderInCategory="100"
-        android:title="Show IP" />
+        android:title="@string/action_ShowIP" />
     <item
         android:id="@+id/EnableVPN"
         android:orderInCategory="101"
-        android:title="Enable VPN" />
+        android:title="@string/action_EnableVPN" />
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="102"
