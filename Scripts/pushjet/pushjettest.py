@@ -20,4 +20,6 @@ CreateQR = config.get("QR","CreateQR")
 if CreateQR == True:
         import qrcode
         img = qrcode.make(my_service.public_key)
-        img.save('')
+        QRSaveLocation = config.get("QR","QRSaveLocation")
+        img.save(QRSaveLocation)
+
