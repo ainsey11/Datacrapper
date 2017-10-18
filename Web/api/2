@@ -1,0 +1,16 @@
+<html>
+<body>
+
+	<?php
+//	$commandline = 'python ../scripts/pushjet/PushjetService.py';
+	(string)$argument = $_GET["name"];
+//	$finalcommand = $commandline $argument
+//	echo "<h1> cmdline = $commandline $argument </h1>";
+	$cmd = shell_exec('python ../scripts/pushjet/PushjetService.py ' .   $argument);
+	?>
+	<pre>
+		<?=$cmd?>
+	</pre>
+</body>
+</html>
+ 					
