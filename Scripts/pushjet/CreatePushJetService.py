@@ -6,7 +6,7 @@ import qrcode
 config = SafeConfigParser()
 config.read ('CreateServiceConfig.ini')
 
-serviceName = config.get("Config","ServiceName")
+ServiceName = config.get("Config","ServiceName")
 FaviconURL = config.get("Config","FaviconURL")
 
 my_service = pushjet.Service.create(ServiceName,FaviconURL)
@@ -14,7 +14,7 @@ my_service = pushjet.Service.create(ServiceName,FaviconURL)
 print('Secret Key: %s' % my_service.secret_key)
 print('Public Key: %s' % my_service.public_key)
 
-CreateQr = bool(config.get("Config","CreateQR"))
+CreateQR = bool(config.get("Config","CreateQR"))
 
 if CreateQR == True:
     img = qrcode.make(my_service.public_key)
