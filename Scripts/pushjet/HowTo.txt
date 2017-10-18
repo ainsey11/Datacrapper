@@ -1,0 +1,5 @@
+This is the pushjet android notificication service
+
+Run the CreatePushjetservice.py script and save the keys it produces. It will also create a QR code png in this folderUse the CreateServiceConfig.ini file to tweak your settings. it requires a servicename and a faviconurl to work.
+
+
