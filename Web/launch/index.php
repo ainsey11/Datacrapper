@@ -23,6 +23,9 @@
 	<a href="http://matrix:32400/Web" class="btn btn-default btn-lg btn-block">Launch Plex</a>
 	<a href="http://matrix:8112" class="btn btn-default btn-lg btn-block">Launch Deluge</a>
 	<a href="http://matrix/zm" class="btn btn-default btn-lg btn-block">Launch Zoneminder Console</a>
+	<a href="http://matrix:8181/" class="btn btn-default btn-lg btn-block">Launch PlexPy Console</a>
+	<a href="http://matrix:3000/" class="btn btn-default btn-lg btn-block">Launch Grafana</a>
+	<a href="http://matrix:8880/" class="btn btn-default btn-lg btn-block">Launch OpenHab UI Selector</a>
 	<div class="container">
 		<div class="form-signin">
 		<a href="../index.php" class="btn btn-default btn-lg btn-block">Return to Main Menu</a>
