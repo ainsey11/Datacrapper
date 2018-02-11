@@ -3,19 +3,20 @@ import requests
 import re
 import psutil
 import datetime
-
+from traceback import print_exc
 from influxdb import InfluxDBClient
-
+import json
 # noinspection PyUnresolvedReferences
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 # noinspection PyUnresolvedReferences
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 current_time = datetime.datetime.utcnow().isoformat()
+influx = InfluxDBClient('matrix', 8086, 'root', 'root', 'storage')
 
 sda = psutil.disk_usage('/mount/sda')
 
-influx_payload = [
+influx_payloadsda = [
     {
         "measurement": "Storage Servers",
         "tags": {
@@ -35,7 +36,7 @@ influx_payload = [
 
 sdb =  psutil.disk_usage('/mount/sdb')
 
-influx_payload2 = [
+influx_payloadsdb = [
     {
         "measurement": "Storage Servers",
         "tags": {
@@ -56,7 +57,7 @@ influx_payload2 = [
 
 cpu = psutil.cpu_percent()
 
-influx_payload3 = [
+influx_payloadcpu = [
     {
         "measurement": "Storage Servers",
         "tags": {
@@ -72,7 +73,7 @@ influx_payload3 = [
 
 ram =  psutil.virtual_memory()
 
-influx_payload4 = [
+influx_payloadram = [
     {
         "measurement": "Storage Servers",
         "tags": {
@@ -93,9 +94,8 @@ influx_payload4 = [
 ]
 
 
-influx = InfluxDBClient('matrix', 8086, 'root', 'root', 'storage')
-influx.write_points(influx_payload)
-influx.write_points(influx_payload2)
-influx.write_points(influx_payload3)
-influx.write_points(influx_payload4)
+influx.write_points(influx_payloadsda)
+influx.write_points(influx_payloadsdb)
+influx.write_points(influx_payloadcpu)
+influx.write_points(influx_payloadram)
 
