@@ -24,7 +24,7 @@ This file simply acts as a web browser for python, we we will tell selenium to u
 
 # Settings, change me up yo!
 url = 'https://pubgtracker.com/profile/pc/AnalSod0my/solo?region=agg'
-grab = ['Kills', 'Losses', 'Wixxn %', 'K/D Ratio']
+grab = ['Kills', 'Losses', 'K/D Ratio']
 
 # First, we create some options for our driver, and use said options to create the driver as headless.
 options = webdriver.ChromeOptions()
@@ -59,7 +59,9 @@ for x in all_data:
 
                 # All done! Have some fun!
 print('Available Keys:', output.keys())
-print('Example:', output['Losses'])
+#print('Example:', output['Losses'])
 
-if float(output['K/D Ratio']) < 1:
-    print('\nI fucking suck at this game.')
+print('\nLosses Count is:', output['Losses'])
+
+#if float(output['K/D Ratio']) < 1:
+#    print('\nI fucking suck at this game.')
