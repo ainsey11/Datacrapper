@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_EnableVPN" type="id">action_EnableVPN</item>
+    <item name="action_GetDNS" type="id">action_GetDNS</item>
+</resources>
