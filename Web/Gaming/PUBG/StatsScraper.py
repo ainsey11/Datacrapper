@@ -1,6 +1,8 @@
 from __future__ import print_function
 from selenium import webdriver          # python -m pip install selenium
 from bs4 import BeautifulSoup           # python -m pip install bs4
+from influxdb import InfluxDBClient    #pip install influxdb
+from datetime import datetime
 
 """
 Because this web page uses javascript to render most of it's elements, we can't simply request the HTML from it.
@@ -17,10 +19,12 @@ You may get the below error when executing...
 
 You can fix this by going to https://sites.google.com/a/chromium.org/chromedriver/downloads and downloading the
 latest release to your system path. Or do what I did and drag & drop it into your python directory, since it's
-already a system path.
+already a systorem path.
 
 This file simply acts as a web browser for python, we we will tell selenium to use as it's engine.
 """
+current_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+
 
 # Settings, change me up yo!
 url = 'https://pubgtracker.com/profile/pc/AnalSod0my/solo?region=agg'
@@ -36,7 +40,7 @@ driver = webdriver.Chrome(chrome_options=options)
 # Next, we ask it to go and render all the JS bullshit on the webpage and spit it back out, we also ask it to
 # wait a few seconds incase there's any timed javascript.
 driver.get(url)
-driver.implicitly_wait(3)
+driver.implicitly_wait(0.2)
 
 # And now we can pull through all the rendered html.
 html = driver.page_source
@@ -59,9 +63,55 @@ for x in all_data:
 
                 # All done! Have some fun!
 print('Available Keys:', output.keys())
-#print('Example:', output['Losses'])
+print('Example:', output['Losses'])
 
-print('\nLosses Count is:', output['Losses'])
+json_Loss_Count = [
+        {
+            "measurement": "Loss_Count",
+            "tags": {
+                "Player": "AnalSod0my"
+                },
+            "time" : current_time,
+            "fields": {
+                "value": output['Losses']
+                }
+            }
+        ]
+json_Kills = [
+        {
+            "measurement": "Kills",
+            "tags": {
+                "Player": "AnalSod0my"
+                },
+            "time" : current_time,
+            "fields": {
+                "value": output['Kills']
+                }
+            }
+        ]
+json_KD_Ratio = [
+        {
+            "measurement": "KD_Ratio",
+            "tags": {
+                "Player": "AnalSod0my"
+                },
+            "time" : current_time,
+            "fields": {
+                "value": output['K/D Ratio']
+                }
+            }
+        ]
+
+client = InfluxDBClient('localhost', 8086, 'root', 'root', 'pubg')
+client.write_points(json_Loss_Count)
+client.write_points(json_Kills)
+client.write_points(json_KD_Ratio)
 
 #if float(output['K/D Ratio']) < 1:
-#    print('\nI fucking suck at this game.')
+
+
+print('\n Losses:', output['Losses'])
+print('\n Kills:', output['Kills'])
+print('\n K/D Ratio:', output['K/D Ratio'])
+
+print('\nI fucking suck at this game.')
