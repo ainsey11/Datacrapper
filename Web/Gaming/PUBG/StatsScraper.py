@@ -28,7 +28,7 @@ current_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
 
 # Settings, change me up yo!
 url = 'https://pubgtracker.com/profile/pc/AnalSod0my/solo?region=agg'
-grab = ['Wins', 'Kills', 'Losses', 'K/D Ratio', 'Rounds Played', 'Win %', 'Time Survived', 'Top 10s', 'Rating']
+grab = ['Wins', 'Kills', 'Losses', 'K/D Ratio', 'Rounds Played', 'Win %', 'Time Survived', 'Top 10s', 'Rating', 'AVG DMG PER MATCH']
 
 # First, we create some options for our driver, and use said options to create the driver as headless.
 options = webdriver.ChromeOptions()
@@ -179,6 +179,21 @@ json_Rating = [
                 }
             }
         ]
+avgdmgpm = float(output['Avg Dmg per Match'])
+json_AVG_DMG_PER_MATCH = [
+        {
+            "measurement": "AVG_DMG_PER_MATCH",
+            "tags": {
+                "Player": "AnalSod0my"
+                },
+            "time" : current_time,
+            "fields": {
+                "value": avgdmgpm
+                }
+            }
+        ]
+
+
 client = InfluxDBClient('localhost', 8086, 'root', 'root', 'pubg')
 client.write_points(json_Loss_Count)
 client.write_points(json_Kills)
@@ -189,6 +204,7 @@ client.write_points(json_Time_Survived)
 client.write_points(json_Wins)
 client.write_points(json_Top_10s)
 client.write_points(json_Rating)
+client.write_points(json_AVG_DMG_PER_MATCH)
 
 print('\n Losses:', output['Losses'])
 print('\n Kills:', output['Kills'])
@@ -199,3 +215,4 @@ print('\n Time Survived:', output['Time Survived'])
 print('\n Wins:', output['Wins'])
 print('\n Top 10s:', output['Top 10s'])
 print('\n Rating:', rating)
+print('\n Average Damage Per Match:', avgdmgpm)
