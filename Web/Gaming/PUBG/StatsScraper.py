@@ -28,7 +28,18 @@ current_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
 
 # Settings, change me up yo!
 url = 'https://pubgtracker.com/profile/pc/AnalSod0my/solo?region=agg'
-grab = ['Wins', 'Kills', 'Losses', 'K/D Ratio', 'Rounds Played', 'Win %', 'Time Survived', 'Top 10s', 'Rating', 'AVG DMG PER MATCH']
+grab = [
+        'Wins',
+        'Kills',
+        'Losses',
+        'K/D Ratio',
+        'Rounds Played',
+        'Win %',
+        'Time Survived',
+        'Top 10s',
+        'Rating',
+        'AVG DMG PER MATCH'
+        ]
 
 # First, we create some options for our driver, and use said options to create the driver as headless.
 options = webdriver.ChromeOptions()
