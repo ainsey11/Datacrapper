@@ -61,7 +61,9 @@ for x in all_data:
         cur_val = x.find('span', {'class': 'value'}).text
         output.update({cur_name: cur_val})
 
-                # All done! Have some fun!
+driver.quit()
+
+# All done! Have some fun!
 print('Available Keys:', output.keys())
 
 json_Loss_Count = [
