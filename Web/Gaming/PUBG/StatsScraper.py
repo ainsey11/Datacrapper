@@ -88,6 +88,8 @@ json_Kills = [
                 }
             }
         ]
+
+
 json_KD_Ratio = [
         {
             "measurement": "KD_Ratio",
@@ -96,7 +98,7 @@ json_KD_Ratio = [
                 },
             "time" : current_time,
             "fields": {
-                "value": output['K/D Ratio']
+                "value": output['K/D Ratio'] 
                 }
             }
         ]
@@ -125,15 +127,29 @@ json_Win_Percent = [
                 }
             }
         ]
+json_Time_Survived = [
+        {
+            "measurement": "Time_Survived",
+            "tags": {
+                "Player": "AnalSod0my"
+                },
+            "time" : current_time,
+            "fields": {
+                "value": output['Time Survived']
+                }
+            }
+        ]
 client = InfluxDBClient('localhost', 8086, 'root', 'root', 'pubg')
 client.write_points(json_Loss_Count)
 client.write_points(json_Kills)
 client.write_points(json_KD_Ratio)
 client.write_points(json_Rounds_Played)
 client.write_points(json_Win_Percent)
+client.write_points(json_Time_Survived)
 
 print('\n Losses:', output['Losses'])
 print('\n Kills:', output['Kills'])
 print('\n K/D Ratio:', output['K/D Ratio'])
 print('\n Rounds Played:', output['Rounds Played'])
 print('\n Win %:', output['Win %'])
+print('\n Time Survived:', output['Time Survived'])
