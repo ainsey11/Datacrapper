@@ -71,8 +71,9 @@ driver.quit()
 # Format the data ready for dumping into the database
 to_db = {}
 for k, v in output.iteritems():  # Key, Value
-    try:  # Try converting every keys value to an int, if it fails, make it a string
-        v = int(v)
+    try:  # Try converting every keys value to a float, if it fails, make it a string
+        v = v.replace(',', '')  # Remove the commmas so they can format into a float correctly
+        v = float(v)
     except ValueError:
         v = str(v)
 
@@ -86,7 +87,7 @@ client = InfluxDBClient('localhost', 8086, 'root', 'root', 'pubg')
 
 # Send it all to the database. We could of done this in the loop above, but I'm keeping the code readable
 for k, v in to_db.iteritems():
-    client.write([to_db[k]])  # Noticed you used a lists in your changes, so I've surrounded it in [ ] to keep the same
-    print(dumps((k, v), indent=4, sort_keys=True))
+    client.write_points([to_db[k]])  # Noticed you used a lists in your changes, so I've surrounded it in [ ] to keep the same
 
+print(dumps(to_db, indent=4, sort_keys=True))
 print('Available Keys:', to_db.keys())
