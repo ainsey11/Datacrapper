@@ -32,7 +32,8 @@ grab = [
     'Assists', 'Headshot Kills', 'Round Most Kills', 'Move Distance PG', 'Longest Time Survived',
     'Avg Survival Time', 'Walk Distance', 'Ride Distance', 'Move Distance', 'AVG Walk Distance',
     'Longest Kill', 'Heals', 'Boosts', 'Damage Dealt', 'Vehicle Destroys', 'Road Kills', 
-    'Max Kill Streaks', 'Revives', 'AVG Survival Time', 'Kills PG', 'Heals PG', 'Headshot Kills PG'
+    'Max Kill Streaks', 'Revives', 'AVG Survival Time', 'Kills PG', 'Heals PG', 'Headshot Kills PG',
+    'Revives'
 
 ]
 
