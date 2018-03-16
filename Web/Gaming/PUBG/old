@@ -28,12 +28,7 @@ This file simply acts as a web browser for python, we will tell selenium to use 
 url = 'https://pubgtracker.com/profile/pc/AnalSod0my/solo?region=agg'
 grab = [
     'Wins', 'Kills', 'Losses', 'K/D Ratio', 'Rounds Played',
-    'Win %', 'Time Survived', 'Top 10s', 'Rating', 'AVG DMG PER MATCH', 'Suicides', 
-    'Assists', 'Headshot Kills', 'Round Most Kills', 'Move Distance PG', 'Longest Time Survived',
-    'Avg Survival Time', 'Walk Distance', 'Ride Distance', 'Move Distance', 'AVG Walk Distance',
-    'Longest Kill', 'Heals', 'Boosts', 'Damage Dealt', 'Vehicle Destroys', 'Road Kills', 
-    'Max Kill Streaks', 'Revives', 'AVG Survival Time', 'Kills PG', 'Heals PG', 'Headshot Kills PG'
-
+    'Win %', 'Time Survived', 'Top 10s', 'Rating', 'AVG DMG PER MATCH'
 ]
 
 current_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
@@ -76,9 +71,8 @@ driver.quit()
 # Format the data ready for dumping into the database
 to_db = {}
 for k, v in output.iteritems():  # Key, Value
-    try:  # Try converting every keys value to a float, if it fails, make it a string
-        v = v.replace(',', '')  # Remove the commmas so they can format into a float correctly
-        v = float(v)
+    try:  # Try converting every keys value to an int, if it fails, make it a string
+        v = int(v)
     except ValueError:
         v = str(v)
 
@@ -92,7 +86,7 @@ client = InfluxDBClient('localhost', 8086, 'root', 'root', 'pubg')
 
 # Send it all to the database. We could of done this in the loop above, but I'm keeping the code readable
 for k, v in to_db.iteritems():
-    client.write_points([to_db[k]])  # Noticed you used a lists in your changes, so I've surrounded it in [ ] to keep the same
+    client.write(to_db[k])  # Noticed you used a lists in your changes, so I've surrounded it in [ ] to keep the same
+    print(dumps((k, v), indent=4, sort_keys=True))
 
-print(dumps(to_db, indent=4, sort_keys=True))
 print('Available Keys:', to_db.keys())
